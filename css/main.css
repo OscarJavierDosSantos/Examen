@@ -46,15 +46,15 @@ h5,
 h6 {
     text-wrap: balance;
 }
-@media screen and (min-width: 375px) {
+@media (width < 470px) {
     * {
         box-sizing: border-box;
     }
 
     body {
         justify-content: center;
-        max-width: 50vw;
-        max-height: 25vh;
+        max-width: auto;
+        max-height: auto;
         color: var(--bs-body-color);
         background-color: var(--bs-body-bg);
     }
@@ -112,7 +112,7 @@ h6 {
         }
     }
 }
-@media screen and (min-width: 375px) {
+@media (width > 375px) {
     * {
         box-sizing: border-box;
     }
