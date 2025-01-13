@@ -1,24 +1,32 @@
-const buttonSend = document.querySelector(".send");
-const buttons = document.querySelectorAll(".circular-button");
-const questionDiv = document.querySelector(".question");
-const resultDiv = document.querySelector(".result");
-const elementP = document.querySelector(".result .selected p");
-let numberSelected = 0;
-
-buttonSend.addEventListener("click", (event) => {
-    event.preventDefault();
-    questionDiv.classList.add("hidden");
-    resultDiv.classList.remove("hidden");
+document.addEventListener('DOMContentLoaded', function () {
+    const buttons = document.querySelectorAll('.button');
+    let selectedRating = null;
+  
     buttons.forEach((button) => {
-        if (button.classList.contains("selected")) {
-            numberSelected = button.attributes["data-number"].value;
-            elementP.innerHTML = `<p>Seleccionastes ${numberSelected} de 5</p>`;
+      button.addEventListener('click', function () {
+        buttons.forEach((button) => button.classList.remove('active'));
+        this.classList.add('active');
+        selectedRating = this.getAttribute('data-number');
+        if (selectedRating) {
+          sendButton.disabled = false;
+          sendButton.style.backgroundColor = 'hsl(25, 97%, 53%)';
         }
+      });
     });
-});
-
-buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-        button.classList.toggle("selected");
+  
+    const sendButton = document.querySelector('.send');
+    sendButton.addEventListener('click', function () {
+        
+      if (selectedRating) {
+        // Oculta el formulario de comentarios
+        document.querySelector('div.card').classList.add("confirmation");
+        // Mostrar la pantalla de confirmación
+        document.querySelector('.confirmationCard').classList.remove("confirmation");;
+        // Actualizar la calificación seleccionada
+        document.querySelector('.message .rating').textContent = selectedRating;
+      } else {
+        alert('Por favor, selecciona una valoración antes de enviar.');
+      }
     });
-});
+  });
+  
