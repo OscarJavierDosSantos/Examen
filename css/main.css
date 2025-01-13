@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@400,700;1,700&display=swap");
+
+:root {
+    --bs-body-bg: hsl(216, 12%, 8%);
+    --bs-font-sans-serif: Overpass;
+    --bs-body-font-family: var(--bs-font-sans-serif);
+    --bs-body-color: hsl(217, 12%, 63%);
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-wrap: break-word;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p {
+    text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+@media screen and (min-width: 375px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        justify-content: center;
+        max-width: 50vw;
+        max-height: 25vh;
+        color: var(--bs-body-color);
+        background-color: var(--bs-body-bg);
+    }
+
+    h1 {
+        color: hsl(0, 0%, 100%);
+        font-size: calc(1.275rem + 0.3vw);
+        margin: 0;
+        margin-block-end: 1rem;
+    }
+
+    div.question {
+        visibility: visible;
+        padding-top: 50%;
+        padding-bottom: 50%;
+        padding-left: 50%;
+        color: var(--bs-body-color);
+        background-color: linear-gradient(
+            45deg,
+            var(--bs-body-bg) 0%,
+            hsl(0, 0%, 11%) 9%,
+            hsl(0, 0%, 17%) 24%,
+            hsl(0, 0%, 7%) 40%,
+            hsl(0, 0%, 0%) 49%,
+            hsl(0, 0%, 17%) 50%,
+            hsl(0, 0%, 28%) 61%,
+            hsl(0, 0%, 40%) 75%,
+            hsl(0, 0%, 35%) 88%,
+            hsl(0, 0%, 30%) 100%
+        );
+        border-radius: 5%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 70px);
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+        margin-inline: 1rem;
+        margin-block: 1rem;
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 1rem;
+        }
+        .circular-button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: hsl(213, 19%, 18%);
+            color: hsl(217, 12%, 63%);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+@media screen and (min-width: 375px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        justify-content: center;
+        max-width: 50vw;
+        max-height: 25vh;
+        color: var(--bs-body-color);
+        background-color: var(--bs-body-bg);
+    }
+
+    h1 {
+        color: hsl(0, 0%, 100%);
+        font-size: calc(1.275rem + 0.3vw);
+        margin: 0;
+        margin-block-end: 1rem;
+    }
+
+    div.question {
+        visibility: visible;
+        padding-top: 50%;
+        padding-bottom: 50%;
+        padding-left: 50%;
+        color: var(--bs-body-color);
+        background-color: linear-gradient(
+            45deg,
+            var(--bs-body-bg) 0%,
+            hsl(0, 0%, 11%) 9%,
+            hsl(0, 0%, 17%) 24%,
+            hsl(0, 0%, 7%) 40%,
+            hsl(0, 0%, 0%) 49%,
+            hsl(0, 0%, 17%) 50%,
+            hsl(0, 0%, 28%) 61%,
+            hsl(0, 0%, 40%) 75%,
+            hsl(0, 0%, 35%) 88%,
+            hsl(0, 0%, 30%) 100%
+        );
+        border-radius: 5%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 70px);
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+        margin-inline: 1rem;
+        margin-block: 1rem;
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 1rem;
+        }
+        .circular-button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: hsl(213, 19%, 18%);
+            color: hsl(217, 12%, 63%);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .circular {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: hsl(213, 19%, 18%);
+
+            img {
+                width: 15px;
+                height: 15px;
+                object-fit: cover;
+                margin: auto;
+            }
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 1rem;
+            border-radius: 50%;
+
+            button[type="submit"] {
+                width: 100%;
+                height: 90%;
+                border-radius: 10%;
+                background-color: hsl(25, 97%, 53%);
+                color: hsl(213, 19%, 18%);
+                border: none;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
