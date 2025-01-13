@@ -141,6 +141,9 @@ h6 {
         align-items: center;
         justify-content: center;
     }
+    .selected {
+        background-color: hsl(0, 0%, 100%);
+    }
     .form {
         display: flex;
         flex-direction: column;
